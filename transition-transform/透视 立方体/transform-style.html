@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transform-style</title>
+	<style>
+		.father {
+			width: 100px;
+			height: 100px;
+			padding: 50px;
+			background-color: pink;
+			margin: 100px auto;
+			transform-style: preserve-3d;
+			transform: rotateY(100deg);
+		}
+		
+		.son {
+			width: 100px;
+			height: 100px;
+			background-color: #ccc;
+			transform: rotateY(90deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+</html>

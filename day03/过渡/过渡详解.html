@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+		.wrapper {
+			width: 1000px;
+			height: 300px;
+			position: relative;
+			background-color: #eee;
+		}
+		.wrapper div {
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			background-color: yellow;
+			left: 0;
+			transition-delay: 1s;
+			transition-property: left, background;
+			transition-duration: 5s;
+			/*transition-timing-function: linear;*/
+			/*transition-timing-function: ease-in;*/
+			/*transition-timing-function: ease-out;*/
+			transition-timing-function: ease-in-out;
+		}
+		.wrapper div:hover {
+			left: 800px;
+			background-color: red;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div></div>
+		</div>
+	</body>
+	</html>	

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>音乐导航条</title>
+	<style>
+		nav {
+			width: 800px;
+			height: 40px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			height: 100%;
+			line-height: 40px;
+			display: flex;
+		}
+		nav li {
+			flex: 1;
+			border-right: 1px dashed #999;
+			text-align: center;
+			position: relative;
+		}
+		li ins {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: none;
+			z-index: -1;
+			top: 40px;
+			left: 0;
+		}
+	</style>
+	<script src="jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		var colorArr = Array("pink", "blue", "yellow","green", "orange","purple", "deeppink", "red");
+		$("nav li").append("<ins></ins>");
+		$("nav li ins").each(function(index,ele){
+			$(this).css("background-color",colorArr[index]);
+		});
+		$("nav li").mouseenter(function(){
+			$(this).children("ins").css("display","block").stop().animate({top: 0},300);
+			$("audio").get($(this).index()).load();
+			$("audio").get($(this).index()).play();
+		}).mouseleave(function(){
+			$(this).children("ins").stop().animate({top:40},300);
+		 });
+
+		$(window).keydown(function(event) {
+			// alert(event.keyCode);
+			var i = 0;
+			if(event.keyCode >= 49 && event.keyCode <= 56){
+				i = event.keyCode-49;
+				$("nav li").eq(i).trigger('mouseenter');
+				setTimeout(function(){
+					$("nav li").eq(i).trigger('mouseleave')
+				},400);
+			}
+		});
+
+	});
+	</script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+			<li>音乐</li>
+		</ul>
+	</nav>
+	<audio src="music/1.ogg"></audio>
+	<audio src="music/2.ogg"></audio>
+	<audio src="music/3.ogg"></audio>
+	<audio src="music/4.ogg"></audio>
+	<audio src="music/5.ogg"></audio>
+	<audio src="music/6.ogg"></audio>
+	<audio src="music/7.ogg"></audio>
+	<audio src="music/8.ogg"></audio>
+</body>
+</html>

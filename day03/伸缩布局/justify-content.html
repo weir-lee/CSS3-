@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>justify-content</title>
+	<style>
+		body>div {
+			border: 1px solid #ccc;
+			width: 800px;
+			height: 110px;
+			margin: 10px;
+		}
+		div div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			line-height: 100px;
+			text-align: center;
+			border: 1px dashed red;
+			/*margin-right: 10px;*/
+		}
+		body > div:nth-child(1) {
+			display: flex;
+			justify-content: flex-start;
+		}
+		body > div:nth-child(2) {
+			display: flex;
+			justify-content: flex-end;
+		}
+		body >div:nth-child(3) {
+			display: flex;
+			justify-content: center;
+		}
+		body > div:nth-child(4) {
+			display:flex;
+			justify-content: space-between;
+		}
+		body > div:nth-of-type(5) {
+			display: flex;
+			justify-content: space-around;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

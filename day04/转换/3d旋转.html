@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		div {
+				width: auto;
+				height: auto;
+			}
+			section {
+				margin: 50px 0;
+			}
+			.rotate-x:hover img {
+				transition: all 2s;
+				transform: rotateX(360deg);
+			}
+			.rotate-y:hover img {
+				transition: all 2s;
+				transform: rotateY(230deg);
+			}
+			.rotate-z:hover img {
+				transition: all 3s;
+				transform-origin: 65px 90px;
+				transform: rotateZ(270deg);
+			}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<section class="rotate-x">
+		<h3>沿着X轴旋转</h3>
+		<div><img src="./images/x.jpg" alt=""></div>
+	</section>
+	<section class="rotate-y">
+		<h3>沿着Y轴旋转</h3>
+		<div><img src="./images/y.jpg" alt=""></div>
+	</section>
+	<section class="rotate-z">
+		<h3>沿着Z轴旋转</h3>
+		<div><img src="./images/z.jpg" alt=""></div>
+	</section>
+</body>
+</html>

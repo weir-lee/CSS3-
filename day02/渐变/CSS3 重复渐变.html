@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 重复渐变</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			float: left;
+			margin: 10px;
+		}
+		div:nth-child(1) {
+			background-image: repeating-linear-gradient(to bottom, green 20%, yellow 40%);
+		}
+		div:nth-child(2) {
+			background-image: repeating-linear-gradient(135deg, pink 20%, deeppink 40%, skyblue 60%);
+		}
+		div:nth-child(3) {
+			background-image: repeating-linear-gradient(135deg, yellow 20%,green 40%);
+		}
+		div:nth-child(4) {
+			height: 40px;
+			background-image: repeating-linear-gradient(135deg, yellow 20%, green 40%);
+			/*background-size: 40px 40px;*/
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

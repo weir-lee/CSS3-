@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 400px;
+			height: 200px;
+			background-color: #ccf;
+			margin: 100px auto;
+			/*border-radius: 200px/100px;*/
+			border-radius: 50%;
+			/*
+			border-shadow属性需要注意的地方：
+			1. border-shadow: 水平偏移,垂直偏移,模糊半径,扩展半径,颜色,内外阴影;
+			2. 内阴影inset，外阴影outset.但是外阴影一定不要加outset,加了样式出不来;
+			3. 可以设置多组阴影效果, 用逗号隔开;
+			4. 内阴影inset书写注意：多组内阴影效果时，后面的要带上前面的内阴影偏移；？
+			*/
+			box-shadow: 0 -15px 15px #88f inset,
+						10px -15px 15px #44f inset,
+						-10px -15px 15px #fff inset,
+						0px 15px #88f,
+						-35px 40px 5px rgba(0,0,0,0.3);
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

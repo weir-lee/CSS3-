@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3重复渐变-径向</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+		}
+		div:nth-child(1) {
+			background-image: radial-gradient(50px at 100px 100px, yellow, green);
+		}
+		div:nth-child(2) {
+			background-image: repeating-radial-gradient(circle, at center, yellow 20%, green 40%);
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-flow</title>
+	<style>
+		body>div {
+			border: 1px solid #ccc;
+			width: 800px;
+			height: 400px;
+			margin: 10px;
+		}
+		div div {
+			/*width: 100px;*/
+			height: 100px;
+			background-color: pink;
+			line-height: 100px;
+			text-align: center;
+			/*border: 1px dashed red;*/
+			margin-right: 5px;
+		}
+		.flex {
+			display: flex;
+			flex-flow: row nowrap;
+		}
+		.flex div:first-child {
+			flex: 1;
+		}
+		.flex div:nth-child(2){
+			width: 300px;
+		}
+		.flex div:nth-child(3){
+			flex: 3;
+		}
+		.flex div:last-child {
+			flex: 2;
+		}
+	</style>
+</head>
+<body>
+	<h2>flex</h2>
+	<div class="flex">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	
+</body>
+</html>

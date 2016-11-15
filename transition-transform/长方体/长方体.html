@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin:0; padding:0;}
+		body{
+			perspective: 700px;
+		}
+		ul {
+			list-style-type: none;
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: transform 6s;
+			transform: scaleX(2.5) scaleY(1.5) rotateX(0deg) rotateY(0deg);
+		}
+	 	ul:hover {
+			/*transform: scaleX(2.5) scaleY(1.5) rotateX(360deg) rotateY(360deg);*/
+		} 
+		li {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			/*background-size: cover; */  /*background-size要和background写在一起才有效*/
+		}
+		li:nth-child(1) {
+			background: url(images/1.jpg);
+			background-size: cover;
+			transform: rotateX(0deg) translateZ(100px);
+		}
+		li:nth-child(2) {
+			background: url(images/2.jpg);
+			background-size: cover;
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		li:nth-child(3) {
+			background: url(images/3.jpg);
+			background-size: cover;
+			transform: rotateX(-180deg) translateZ(100px);
+		}
+		li:nth-child(4) {
+			background: url(images/4.jpg);
+			background-size: cover;
+			transform: rotateX(-270deg) translateZ(100px);
+		}
+		li:nth-child(5) {
+			background: url(images/1.png);
+			background-size: cover;
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		li:nth-child(6) {
+			background: url(images/6.png);
+			background-size: cover;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		div {position: relative;}
+		span {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-top: 5px solid deeppink;
+			border-right: 5px solid deeppink;
+			top: -20%;
+			left: 56%;
+			cursor: pointer;
+			transform: rotate(135deg);
+		}
+		span.prev {
+			margin-left: -120px;
+			transform: rotate(-45deg);
+		}
+		span.next {
+			margin-left: 120px;
+			top: 70%;
+			left: 40%;
+		}
+		span.left {
+			transform: rotate(-135deg);
+			margin-left: -120px;
+			top: 40%;
+			left: 40%;
+		}
+		span.right {
+			transform: rotate(45deg);
+			margin-left: -120px;
+			top: 40%;
+			left: 73%;
+		}
+	</style>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script>
+		$(function(){
+			var num = 0;
+			$(".prev").on("click",function(){
+				num++;
+                $("ul").css("transform","scaleX(2.5) scaleY(1.5) rotateX("+90*num+") rotateY(360deg)");
+			})
+			$(".next").on("click",function(){
+				num--;
+				$("ul").css("transform","scaleX(2.5) scaleY(1.5) rotateX("+(90*num)+"deg  rotateY(0deg)");
+			})
+			var count = 0;
+			$(".left").on("click",function(){
+				count++;
+				$("ul").css("transform","sscaleX(2.5) scaleY(1.5) rotateX(0deg) rotateY("+count*90+"deg)");
+			})
+			$(".left").on("click",function(){
+				count--;
+				$("ul").css("transform","sscaleX(2.5) scaleY(1.5) rotateX(0deg) rotateY("+count*90+"deg)");
+			})
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<span class="prev"></span><span class="next"></span>
+	<span class="left"></span><span class="right"></span>
+	</div>
+</body>
+</html>

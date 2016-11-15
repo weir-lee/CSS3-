@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>转换-rotate</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			transition: all 1s;
+			transform-origin: right top;
+		}
+		.rotate:hover div {
+			transform: rotate(278deg);
+		}
+		.rotate-reverse:hover div {
+			transform: rotate(-180deg);
+		}
+	</style>
+</head>
+<body>
+	<section class="rotate">
+		<h3>顺时针旋转</h3>
+		<div>顺时针旋转</div>
+	</section>
+	<section class="rotate-reverse">
+		<h3>逆时针旋转</h3>
+		<div>逆时针旋转</div>
+	</section>
+</body>
+</html>

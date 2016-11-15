@@ -1,0 +1,102 @@
+* {margin: 0; padding: 0;}
+ul {list-style-type: none;}
+body {
+	background-color: #ccc;
+	font: 16px "Microsoft YaHei";
+	color: #888;
+}
+a {
+	text-decoration:none;
+	color: #888;
+}
+nav {
+	width: 80%;
+	height: 50px;
+	margin: 100px auto;
+	background-image: linear-gradient(to top, #292929,#252525);
+	border-top: 2px solid #1b1b1b;
+	border-bottom: 2px solid #222;
+	/* min-width设置最小宽度 */
+	min-width: 500px;
+}
+nav>ul {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+nav>ul>li {
+	flex: 1;
+	text-align:center;
+	line-height: 50px;
+	position: relative;
+}
+nav li:hover {
+	background-image: linear-gradient(#1c1c1c,#1b1b1b);
+}
+.subnav {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	perspective: 700px;
+	/* 解决bug: opacity为0鼠标经过subnav下方时subnav出现 */
+	/* min-height的妙用 */
+	max-height: 0;
+}
+.subnav li {
+	background-image: linear-gradient(to top, #292929,#252525);
+	opacity: 0;
+	transform: rotateY(90deg);
+	transition: transform 0.8s , opacity 0.5s;
+}
+nav>ul>li:hover .subnav li{
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+.subnav li:first-child {
+	transition-delay: 0;
+	/*transition-delay: 250ms;*/
+}
+.subnav li:nth-child(2) {
+	transition-delay: 100ms;
+	/*transition-delay: 200ms;*/
+}
+.subnav li:nth-child(3) {
+	transition-delay: 200ms;
+	/*transition-delay: 150ms;*/
+}
+.subnav li:nth-child(4) {
+	transition-delay: 400ms;
+	/*transition-delay: 100ms;*/
+}
+.subnav li:nth-child(5) {
+	transition-delay: 500ms;
+	/*transition-delay: 50ms;*/
+}
+.subnav li:nth-child(6) {
+	transition-delay: 600ms;
+}
+nav>ul>li:hover .subnav li:nth-child(1)
+	{
+		 -webkit-transition-delay: 0s;
+	}
+nav>ul>li:hover .subnav li:nth-child(2)
+	{
+		 -webkit-transition-delay: 50ms;
+	}
+nav>ul>li:hover .subnav li:nth-child(3)
+	{
+		 -webkit-transition-delay: 100ms;
+	}
+nav>ul>li:hover .subnav li:nth-child(4)
+	{
+		 -webkit-transition-delay: 150ms;
+	}	
+nav>ul>li:hover .subnav li:nth-child(5)
+	{
+		 -webkit-transition-delay: 200ms;
+	}
+nav>ul>li:hover .subnav li:nth-child(6)
+	{
+		 -webkit-transition-delay: 250ms;
+	}

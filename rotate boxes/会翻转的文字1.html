@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {margin: 0; padding: 0; text-align: center;}
+		body {
+			font: 8rem "Microsoft YaHei"; padding: 50px; /*font-family:"Microsoft YaHei";*/
+		}
+		.box {
+			margin: 0.2rem;
+			position: relative;
+			color: #369;
+		}
+		/* 分析：四个字有四个大盒子，每个大盒子有三个小盒子，怎样一次写出三个小盒子？
+			定位？ 伪类？ 伪类更方便
+		*/
+		.box:before, .box:after {
+			/* attr()属性的值 */
+			content: attr(data-txt);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform-origin: left top;
+			transition: all 0.3s ease 0s;
+		}
+		/* 白色字 */
+		.box:after {
+			color: #fff;
+			z-index: 3;
+			transform: rotateY(-15deg);
+		}
+		/* 灰色阴影 */
+		.box:before {
+			color: rgba(0,0,0,0.3);
+			z-index: 2;
+			transform: scale(1.1,1);
+		}
+		/*白色字旋转 */
+		.box:hover:after {
+			color: #fafafa;
+			transform: rotateY(-40deg) skew(0deg, 5deg);
+		}
+		/*灰色阴影旋转*/
+		.box:hover:before {
+			transform: rotateY(-40deg) scale(1.1,1) skew(0deg, 20deg);
+		}
+	</style>
+</head>
+<body>
+	<span class="box" data-txt="传">传</span>
+	<span class="box" data-txt="智">智</span>
+	<span class="box" data-txt="播">播</span>
+	<span class="box" data-txt="客">客</span>
+</body>
+</html>

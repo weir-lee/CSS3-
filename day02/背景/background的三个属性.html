@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background-clip三个属性之间的区别</title>
+	<style>
+	body {
+			margin: 0;
+			padding: 0;
+			font-family: '微软雅黑';
+			background-color: #F7F7F7;
+		}
+
+		.wrapper {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		.wrapper > section {
+			min-height: 300px;
+			margin-bottom: 30px;
+			box-shadow: 1px 1px 4px #DDD;
+			background-color: #FFF;
+		}
+
+		.wrapper > header {
+			text-align: center;
+			line-height: 1;
+			padding: 20px;
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+		.wrapper > header {
+			text-align: center;
+			line-height: 1;
+			padding: 20px;
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+		.wrapper section > header {
+			line-height: 1;
+			padding: 10px;
+			font-size: 22px;
+			color: #333;
+			background-color: #EEE;
+		}
+
+		section > div {
+			margin: 100px 20px;
+			width: 200px;
+			height: 200px;
+			border: 5px dashed red;
+			padding: 50px;
+			background-color: yellow;
+		}
+		.div1 {
+			background-clip: border-box;
+		}
+		.div2 {
+			background-clip: padding-box;
+		}
+		.div3 {
+			background-clip: content-box;
+		}
+		.div4 {
+			background-clip: text;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header>background-clip的三个属性</header>
+		<section>
+			<header>background-clip: border-box</header>
+			<div class="div1"></div>
+		</section>
+		<section>
+			<header>background-clip: padding-box</header>
+			<div class="div2"></div>
+		</section>
+		<section>
+			<header>background-clip: content-box</header>
+			<div class="div3"></div>
+		</section>
+		<section>
+			<header>background-clip: text-box</header>
+			<div class="div4">background-clip是用来控制背景区域的。
+				border-box是以border外侧开始当做背景区域，border-padding是以padding开始算背景，border-content是以content部分当做背景区域
+			</div>
+		</section>
+	</div>
+	
+</body>
+</html>

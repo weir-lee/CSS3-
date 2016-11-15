@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点击旋转</title>
+	<style>
+		.zhuan {
+			/*自动检测大小*/
+			display: inline-block;
+			transition: all 2s;
+		}
+		.zhuan img {
+			/*transition: all 2s;*/
+		}
+		.rotateDiv {
+			transform: rotate(360deg);
+		}
+	</style>
+</head>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+	/* 该案例体验CSS3与JS结合使用比单独使用JS事半功倍
+	 *	点击正旋转360度，再点击反旋转360度.如果只使用JS就要if else判断flag
+	 *  结合CSS3添加删除类，再使用jQUery toggleClass就更方便了
+	*/
+	$(function(){
+		$(".zhuan").on('click',function(){
+			// $(this).children("img").toggleClass('rotateDiv');
+			 $(this).toggleClass('rotateDiv');
+		});
+	});
+</script>
+<body>
+	<div class="zhuan">
+		<img src="zhuan.jpg" alt="">
+	</div>
+</body>
+</html>

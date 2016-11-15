@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-direction</title>
+	<style>
+		body > div {
+			margin: 20px ;
+			display: flex;
+			/*flex-direction: row;*/
+
+		}
+		.demo div {
+			width: 150px;
+			height: 150px;
+			background-color: pink;
+		}
+		body > div:nth-child(2) {
+			flex-direction: row-reverse;
+		}
+		body > div:nth-child(3){
+			flex-direction: column;
+		}
+		body > div:nth-child(4) {
+			flex-direction: column-reverse;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

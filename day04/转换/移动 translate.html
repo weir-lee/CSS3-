@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动 translate</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			transition: all 2s;
+		}
+		section {
+			margin: 50px 0;
+		}
+		.translate-x:hover div {
+			transform: translate(50%);
+		}
+		.translate-y:hover div {
+			transform: translate(0,400px);
+		}
+		.translate:hover {
+			transform: translate(400px, -400px);
+		}
+	</style>
+</head>
+<body>
+	<section class="translate-x">
+		<h3>水平移动</h3>
+		<div>水平移动</div>
+	</section>
+	<section class="translate-y">
+		<h3>垂直移动</h3>
+		<div>垂直移动</div>
+	</section>
+	<section class="translate">
+		<h3>移动</h3>
+		<div>移动</div>
+	</section>
+</body>
+</html>

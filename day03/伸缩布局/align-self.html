@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>align-self</title>
+	<style>
+		body>div {
+			border: 1px solid #ccc;
+			width: 500px;
+			height: 400px;
+			margin: 10px;
+		}
+		div div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			line-height: 100px;
+			text-align: center;
+			border: 1px dashed red;
+			margin-right: 10px;
+		}
+		.demo {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.demo:first-child div:nth-child(2) {
+			align-self: flex-start;
+		}
+		.demo:nth-child(2) div:first-child {
+			align-self: flex-end;
+		}
+		.demo:nth-child(3) div:last-child {
+			height: auto;
+			align-self: stretch;
+		}
+		.demo:nth-child(4) div:last-child {
+			align-self: center;
+		}
+		.demo:nth-child(5) div:last-child {
+			line-height: 160px;
+			align-self: baseline;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<div class="demo">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

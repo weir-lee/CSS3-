@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>align-items</title>
+	<style>
+		body>div {
+			border: 1px solid #ccc;
+			width: 400px;
+			height: 500px;
+			margin: 10px;
+		}
+		div div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			line-height: 100px;
+			text-align: center;
+			border: 1px dashed red;
+			/*margin-right: 10px;*/
+		}
+		body > div:nth-of-type(1) {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+		body > div:nth-of-type(2) {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+		}
+		body >div:nth-of-type(3) {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		body > div:nth-of-type(4) div:nth-child(2) {
+			line-height: 160px;
+		}
+		body > div:nth-of-type(4) {
+			display: flex;
+			flex-direction: row;
+			align-items: baseline;
+		}
+		body > div:nth-of-type(5) {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+		}
+		body > div:nth-of-type(5) div {
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<h2>flex-start</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h2>flex-end</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h2>center</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h2>baseline</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<h2>stretch</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+</body>
+</html>

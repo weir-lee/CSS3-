@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex-flow</title>
+	<style>
+		body>div {
+			border: 1px solid #ccc;
+			width: 800px;
+			height: 400px;
+			margin: 10px;
+		}
+		div div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			line-height: 100px;
+			text-align: center;
+			border: 1px dashed red;
+			margin-right: 5px;
+		}
+		body > div:nth-of-type(1) {
+			display: flex;
+			flex-flow: column nowrap;
+		}
+		body > div:nth-of-type(2) {
+			display: flex;
+			flex-flow: column wrap;
+		}
+		body >div:nth-of-type(3) {
+			display: flex;
+			flex-flow: column wrap-reverse;
+		}
+	</style>
+</head>
+<body>
+	<h2>flex-flow: column nowrap</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+	</div>
+	<h2>flex-flow: column wrap</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+	</div>
+	<h2>flex-flow: column wrap-reverse</h2>
+	<div>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+	</div>
+</body>
+</html>

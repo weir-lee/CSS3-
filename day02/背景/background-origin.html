@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background-origin</title>
+	<style>
+		div {
+			float: left;
+			margin: 10px;
+			width: 200px;
+			height: 200px;
+			padding: 30px;
+			border: 5px dashed red;
+			background-image: url(bg.jpg);
+			background-repeat: no-repeat;
+		} 
+		.div1 {
+			background-origin: border-box;
+		}
+		.div2 {
+			background-origin: padding-box;
+		}
+		.div3 {
+			background-origin: content-box;
+		}
+	</style>
+</head>
+<body>
+	<header>background-origin是用来控制背景图的原点位置的</header>	
+	<div class="div1"></div>
+	<div class="div2"></div>
+	<div class="div3"></div>
+</body>
+</html>

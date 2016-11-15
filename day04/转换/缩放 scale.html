@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缩放 scale</title>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			transition: all 2s;
+			transform-origin: 0 0;
+		}
+		section {
+			margin: 50px 0;
+		}
+		.scale-x:hover div {
+			transform: scale(0.5);
+		}
+		.scale-y:hover div {
+			transform: scale(2,1);
+		}
+		.scale:hover div {
+			transform: scale(1,2);
+		}
+	</style>
+</head>
+<body>
+	<section class="scale-x">
+		<h3>x和y方向同时缩放</h3>
+		<div>x和y方向同时缩放</div>
+	</section>
+	<section class="scale-y">
+		<h3>x方向缩放</h3>
+		<div>x方向缩放</div>
+	</section>
+	<section class="scale">
+		<h3>y方向缩放</h3>
+		<div>y方向缩放</div>
+	</section>
+</body>
+</html>
